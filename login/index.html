@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+	<script src="js/login.js"></script>
 
 	</head>
 	<body>
@@ -42,17 +45,16 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="#" class="signin-form">
-			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" placeholder="Username" required>
-			      		</div>
-		            <div class="form-group mb-3">
-		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" placeholder="Password" required>
-		            </div>
+			      	<div class="form-group mb-3">
+						<label class="label" for="email">Email</label>
+						<input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
+					</div>
+					<div class="form-group mb-3">
+						<label class="label" for="password">Mot de passe</label>
+						<input type="password" class="form-control" placeholder="Mot de passe" name="password" id="password" required>
+					</div>
 		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+		            	<button onclick="logIn()" id="logIn" type="submit" class="form-control btn btn-primary submit px-3">Se connecter</button>
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
@@ -65,7 +67,6 @@
 										<a href="#">Forgot Password</a>
 									</div>
 		            </div>
-		          </form>
 		        </div>
 		      </div>
 				</div>
