@@ -10573,7 +10573,7 @@ body {
 a {
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
-  color: #f35588;
+  color: #b52828;
 }
 
 a:hover, a:focus {
@@ -10592,7 +10592,7 @@ h1, h2, h3, h4, h5,
 }
 
 .bg-primary {
-  background: #f35588 !important;
+  background: #b52828 !important;
 }
 
 .ftco-section {
@@ -10636,10 +10636,10 @@ h1, h2, h3, h4, h5,
 }
 
 .text-wrap {
-  background: #f75959;
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-  background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 );
+  background: #b52828;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #b52828), color-stop(100%, #b52828));
+  background: linear-gradient(135deg, #b52828 0%, #b52828 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52828', endColorstr='#b52828', GradientType=1 );
   color: #fff;
 }
 
@@ -10744,7 +10744,7 @@ h1, h2, h3, h4, h5,
 }
 
 .social-media .social-icon:hover, .social-media .social-icon:focus {
-  background: #f35588;
+  background: #b52828;
 }
 
 .social-media .social-icon:hover span, .social-media .social-icon:focus span {
@@ -10810,11 +10810,11 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #f35588;
+  color: #b52828;
 }
 
 .checkbox-primary input:checked ~ .checkmark:after {
-  color: #f35588;
+  color: #b52828;
 }
 
 .btn {
@@ -10831,30 +10831,30 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-primary {
-  background: #f35588;
-  border: 1px solid #f35588;
+  background: #b52828;
+  border: 1px solid #b52828;
   color: #fff;
-  background: #f75959;
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-  background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 );
+  background: #b52828;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #b52828), color-stop(100%, #b52828));
+  background: linear-gradient(135deg, #b52828 0%, #b52828 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52828', endColorstr='#b52828', GradientType=1 );
 }
 
 .btn.btn-primary:hover {
-  border: 1px solid #f35588;
-  background: #f35588;
+  border: 1px solid #b52828;
+  background: #b52828;
   color: #fff;
 }
 
 .btn.btn-primary.btn-outline-primary {
-  border: 1px solid #f35588;
+  border: 1px solid #b52828;
   background: transparent;
-  color: #f35588;
+  color: #b52828;
 }
 
 .btn.btn-primary.btn-outline-primary:hover {
   border: 1px solid transparent;
-  background: #f35588;
+  background: #b52828;
   color: #fff;
 }
 

@@ -15,11 +15,11 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 function logIn() {
-var email = document.getElementById("email");
-var password = document.getElementById("password");
-const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-promise.catch(e => alert(e.message));
-alert("Signed in " + email.value);
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+    promise.catch(e => alert(e.message));
+    alert("Signed in " + email.value);
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -31,3 +31,20 @@ if (user) {
     alert("Currently no active users");
 }
 });
+
+function signOut() {
+    auth.signOut();
+    alert("Signed out");
+}
+
+const googleSignIn = () => {
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+  
+    auth.signInWithPopup(googleProvider)
+    .then(() => {
+      console.log("bruh");
+    })
+    .catch(error => {
+      console.error(error);
+    })
+  }
