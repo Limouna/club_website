@@ -14,6 +14,10 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+function signOut() {
+  auth.signOut();
+}
+
 function signUp() {
   var email = document.getElementById("email");
   var password = document.getElementById("password");
@@ -21,3 +25,14 @@ function signUp() {
   promise.catch(e => alert(e.message));
   alert("Signed up");
 }
+
+function changeNavbarSigninButton() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      document.getElementById("navbar-signin").innerHTML = '<a href="#" class="button primary" onclick="signOut()" id="signOut">Sign Out</a>';
+    } else {
+      // No user is signed in.
+    }
+  });
+}
+changeNavbarSigninButton();
