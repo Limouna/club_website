@@ -26,8 +26,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
     var email = user.email;
     alert("Active user email : " + email);
-
+    document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="navbar-auth">Sign Out</a>';
 } else {
+    document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" id="navbar-auth">Sign In</a>';
     alert("Currently no active users");
 }
 });

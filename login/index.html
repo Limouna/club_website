@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 07</title>
+  	<title>Sign in</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="scss/style.css">
+	<link rel="stylesheet" href="css/bannerStyle.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
@@ -16,11 +20,41 @@
 
 	</head>
 	<body>
+
+		<!-- Header -->
+		<header id="header" class="alt" style="background-color: white;">
+			<h1 id="logo"><a href="index.html" style="color: black;">Home</a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="current"><a href="index.html" style="color: black;">Learn</a></li>
+					<li class="current"><a href="index.html" style="color: black;">Vote</a></li>
+					<li class="current"><a href="index.html" style="color: black;">About us</a></li>
+					<li class="submenu">
+						<a href="#" style="color: black;">Our Works</a>
+						<ul>
+							<li><a href="left-sidebar.html">One-Shot</a></li>
+							<li><a href="right-sidebar.html">Visual Novel</a></li>
+							<li class="submenu">
+								<a href="#">Submenu</a>
+								<ul>
+									<li><a href="#">Dolore Sed</a></li>
+									<li><a href="#">Consequat</a></li>
+									<li><a href="#">Lorem Magna</a></li>
+									<li><a href="#">Sed Magna</a></li>
+									<li><a href="#">Ipsum Nisl</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="login/index.html" class="button primary" id="navbar-auth">Sign In</a></li>
+				</ul>
+			</nav>
+		</header>
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Se connecter a CJE</h2>
+					<h2 class="heading-section">Creer un nouveau compte</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -29,44 +63,35 @@
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
 								<h2>Bienvenue au CJE</h2>
-								<p>Vous n'avez pas de compte ??</p>
-								<a href="../signup/index.html" class="btn btn-white btn-outline-white">Creer un maintenant !</a>
+								<p>Vous n'avez pas de compte ?</p>
+								<a href="../signup/index.html" class="btn btn-white btn-outline-white">creer un maintenant !</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
 			      	<div class="d-flex">
-			      		<div class="w-100">
-			      			<h3 class="mb-4">Connexion</h3>
-			      		</div>
-								<div class="w-100">
-									<p class="social-media d-flex justify-content-end">
-										<a onclick="googleSignIn()" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-									</p>
-								</div>
 			      	</div>
-			      	<div class="form-group mb-3">
-						<label class="label" for="email">Email</label>
-						<input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
-					</div>
-					<div class="form-group mb-3">
-						<label class="label" for="password">Mot de passe</label>
-						<input type="password" class="form-control" placeholder="Mot de passe" name="password" id="password" required>
-					</div>
-		            <div class="form-group">
-		            	<button onclick="logIn()" id="logIn" type="submit" class="form-control btn btn-primary submit px-3">Se connecter</button>
-		            </div>
-		            <div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Se rappeler de moi
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Mot de passe oublié</a>
-									</div>
-		            </div>
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="username">Nom d'utilisateur</label>
+			      			<input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" id="email" required>
+			      		</div>
+						<div class="form-group mb-3">
+							<label class="label" for="password">Mot de passe</label>
+							<input type="password" class="form-control" placeholder="Mot de passe" name="password" id="password" required>
+						</div>
+						<div class="form-group">
+							<button onclick="logIn()" id="logIn" type="submit" class="form-control btn btn-primary submit px-3">Se connecter</button>
+						</div>
+						<div class="form-group d-md-flex">
+							<div class="w-50 text-left">
+							   <label class="checkbox-wrap checkbox-primary mb-0">Se rappeler de moi
+							   <input type="checkbox" checked>
+							   <span class="checkmark"></span>
+							   </label>
+							</div>
+							<div class="w-50 text-md-right">
+							   <a href="#">Mot de passe oublié</a>
+							</div>
+						 </div>
 		        </div>
 		      </div>
 				</div>
@@ -74,13 +99,24 @@
 		</div>
 	</section>
 
-
-	<button onclick="signOut()" id="signOut">Sign out</button>
-
 	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/banner.js"></script>
+		
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

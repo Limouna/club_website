@@ -14,6 +14,17 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      var email = user.email;
+      alert("Active user email : " + email);
+      document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="navbar-auth">Sign Out</a>';
+  } else {
+      document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" id="navbar-auth">Sign In</a>';
+      alert("Currently no active users");
+  }
+  });
+
 function signOut() {
   auth.signOut();
 }
@@ -26,13 +37,13 @@ function signUp() {
   alert("Signed up");
 }
 
-function changeNavbarSigninButton() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      document.getElementById("navbar-signin").innerHTML = '<a href="#" class="button primary" onclick="signOut()" id="signOut">Sign Out</a>';
-    } else {
-      // No user is signed in.
-    }
-  });
-}
-changeNavbarSigninButton();
+// function changeNavbarSigninButton() {
+//   firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       document.getElementById("navbar-signin").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="signOut">Sign Out</a>';
+//     } else {
+//       // No user is signed in.
+//     }
+//   });
+// }
+// changeNavbarSigninButton();
