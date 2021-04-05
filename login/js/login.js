@@ -22,6 +22,12 @@ function logIn() {
     alert("Signed in " + email.value);
 }
 
+function signOut() {
+  auth.signOut();
+  alert("Signed out");
+}
+
+//OnStateChange listener for the auth
 firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
     var email = user.email;
@@ -33,10 +39,7 @@ if (user) {
 }
 });
 
-function signOut() {
-    auth.signOut();
-    alert("Signed out");
-}
+
 
 const googleSignIn = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();

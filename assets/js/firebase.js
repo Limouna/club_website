@@ -14,14 +14,18 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+function signOut() {
+    auth.signOut();
+    alert("Signed out");
+  }
 //firebase auth changer listener
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         var email = user.email;
         alert("Active user email : " + email);
-        document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="navbar-auth">Sign Out</a>';
+        document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="navbar-auth">Déconnexion</a>';
     } else {
-        document.getElementById("navbar-auth").innerHTML = '<a href="login/index.html" class="button primary" id="navbar-auth">Sign In</a>';
+        document.getElementById("navbar-auth").innerHTML = '<a href="login/index.html" class="button primary" id="navbar-auth">Connexion</a>';
         alert("Currently no active users");
     }
     });
