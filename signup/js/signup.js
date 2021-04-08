@@ -12,6 +12,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+var db = firebase.firestore();
 const auth = firebase.auth();
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -32,18 +33,23 @@ function signOut() {
 function signUp() {
   var email = document.getElementById("email");
   var password = document.getElementById("password");
-  const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-  promise.catch(e => alert(e.message));
-  alert("Signed up");
+  var username = document.getElementById("username");
+  firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+  .then((userCredential) => {
+    db.collection("users").add({
+      email: email.value,
+      password: password.value,
+      username: username.value,
+      voted : false
+    })
+    .then((docRef) => {
+      //console.log("Document written with ID: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+  })
+  .catch((error) => {
+    console.log("sign up error " + error.message);
+  });
 }
-
-// function changeNavbarSigninButton() {
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     if (user) {
-//       document.getElementById("navbar-signin").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="signOut">Sign Out</a>';
-//     } else {
-//       // No user is signed in.
-//     }
-//   });
-// }
-// changeNavbarSigninButton();
