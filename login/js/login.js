@@ -32,11 +32,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 if (user) {
     var email = user.email;
     alert("Active user email : " + email);
-    document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" onclick="signOut()" id="navbar-auth">Sign Out</a>';
+    document.getElementById("navbar-auth").innerText = "Déconnexion";
+    document.getElementById("navbar-auth").href = "index.html";
+    document.getElementById("navbar-auth").setAttribute('onclick','signOut()')
 } else {
-    document.getElementById("navbar-auth").innerHTML = '<a href="index.html" class="button primary" id="navbar-auth">Sign In</a>';
+    document.getElementById("navbar-auth").innerText = "Connexion";
+    document.getElementById("navbar-auth").href = "login/index.html";
     alert("Currently no active users");
-}
+  }
 });
 
 
