@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sign up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="scss/style.css">
+	<link rel="stylesheet" href="css/bannerStyle.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//db.onlinewebfonts.com/c/c6f5218272f98dd91e0742b9c2bdb0a2?family=Gang+of+Three" rel="stylesheet" type="text/css"/>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+	<script src="js/signup.js"></script>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header" class="alt" style="background-color: white;">
+			<h1 id="logo"><a href="../index.html"><img src="CJE_logo.png" style="width:4%;margin-top:-1em;"></a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="current"><a href="index.html" style="color: black;  text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">Home</a></li>
+
+					<li class="current"><a href="index.html" style="color: black; text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">Learn</a></li>
+					<li class="current"><a href="../vote/index.html" style="color: black; text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">Vote</a></li>
+					<li class="current"><a href="index.html" style="color: black;text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">About us</a></li>
+					<li class="submenu">
+						<a href="#" style="color: black;text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">Our Works</a>
+						<ul>
+							<li><a href="left-sidebar.html" style="font-family: 'Roboto', sans-serif;margin-top:5px">One-Shot</a></li>
+							<li><a href="right-sidebar.html" style="font-family: 'Roboto', sans-serif;">Visual Novel</a></li>
+							<li class="submenu">
+								<a href="#">Submenu</a>
+								<ul >
+									<li><a href="#" style="font-family: 'Roboto', sans-serif;">Dolore Sed</a></li>
+									<li><a href="#" style="font-family: 'Roboto', sans-serif;">Consequat</a></li>
+									<li><a href="#" style="font-family: 'Roboto', sans-serif;">Lorem Magna</a></li>
+									<li><a href="#" style="font-family: 'Roboto', sans-serif;">Sed Magna</a></li>
+									<li><a href="#" style="font-family: 'Roboto', sans-serif;">Ipsum Nisl</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="login/index.html" class="button primary" id="navbar-auth" style="text-transform: capitalize;font-family: 'Roboto', sans-serif;font-size:15px">Sign In</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center mb-5">
+						<h2 class="heading-section">Creer un nouveau compte</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-12 col-lg-10">
+						<div class="wrap d-md-flex">
+							<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+								<div class="text w-100">
+									<h2>Bienvenue au CJE</h2>
+									<p>Vous avez déjà un compte ?</p>
+									<a href="/login_v2/index.html"btn btn-white btn-outline-white">Connectez vous !</a>
+								</div>
+					  </div>
+							<div class="login-wrap p-4 p-lg-5">
+						  <div class="d-flex">
+						  </div>
+						<form action="#" class="signin-form"></form>
+							  <div class="form-group mb-3">
+								  <label class="label" for="username">Nom d'utilisateur</label>
+								  <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" id="username" required>
+							  </div>
+							<div class="form-group mb-3">
+								<label class="label" for="email">Email</label>
+								<input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
+							</div>
+							<div class="form-group mb-3">
+								<label class="label" for="password">Mot de passe</label>
+								<input type="password" class="form-control" placeholder="Mot de passe" name="password" id="password" required>
+							</div>
+							<div class="form-group mb-3">
+								<label class="label" for="password_confirm">Confirmer votre mot de passe</label>
+								<input type="password" class="form-control" placeholder="Confirmation" name="password_confirm" id="password_confirm" required>
+							</div>
+							<div class="form-group">
+								<button onclick="signUp()" id="signUp" type="submit" class="form-control btn btn-primary submit px-3">Creer mon compte</button>
+							</div>
+					  </form>
+					</div>
+				  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<footer class=" d-flex flex-column min-vh-50" style="font-weight:normal;">
+		<div class="container" style="padding-top:10px;">
+		  <div class="row">
+			<div class="col-md-4">
+			  <h5><i class="fa fa-fire"></i> <span  style="font-family:gang of three ">CJE Ensias</span></h5>
+			  <div class="col-5">
+				<ul class="list-unstyled">
+				  <li <br>
+					<a href="#" style="border:none" >Home</a>
+					<br>
+
+					<a href="#" style="border:none">About US</a>
+					<br>
+					<a href="#" style="border:none">Contact US</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <h5><i class="fa fa-address-card"></i><span  style="font-family:gang of three ">  Contact US</span> </h5>
+			  <div class="col-12">
+				<ul class="list-unstyled">
+				  <li <br>
+					Adresse : Avenue Mohamed Ben Abdellah Regragui, Rabat
+					<br> Num : 06106060606
+					<br> Email : adnane@adnane.com
+				  </li>
+				</ul>
+			  </div>
+			</div>
+			<!--   <div class="">
+			  <img src="CJE_logo.png" width="150px">
+			</div> -->
+			<ul class="nav" style="margin-left:auto">
+			  <li class="nav-item">
+				<a href="" class="nav-link pl-0" style="border:none;"><i class="fab fa-facebook-f fa-2x"></i></a>
+			  </li>
+			  <li class="nav-item">
+				<a href="" class="nav-link" style="border:none"><i class="fab fa-instagram fa-2x"></i></a>
+			  </li>
+			</ul>
+
+
+		  </div>
+
+		</div>
+		<!-- Copyrights -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+		  © 2021 Copyrights :
+		  <a class="text-white" href="https://google.com/" style="font-family:gang of three ; border:none ">CJE-ENSIAS</a>
+		</div>
+		<!-- Copyrights -->
+	  </footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/banner.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
