@@ -3394,28 +3394,38 @@ input, select, textarea {
 		grid-area: anime_recommendations;
 		display: grid;
 		grid-template-columns: 1fr ;
-		grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas: "anime-1" "anime-2" "anime-3" "anime-4" "anime-5";
 	  }
 
 		#anime-1 {
 		background-color: #70aecd;
 		grid-area: anime-1;
+		justify-self: center;
+		align-self: center;
 		}
 		#anime-2 {
 		background-color: #829bc9;
+		justify-self: center;
+		align-self: center;
 		grid-area: anime-2;
 		}
 		#anime-3 {
 		background-color: #829bc9;
+		align-self: center;
+		justify-self: center;
 		grid-area: anime-3;
 		}
 		#anime-4 {
 		background-color: #1c2021;
+		align-self: center;
+		justify-self: center;
 		grid-area: anime-4;
 		}
 		#anime-5 {
 		background-color: #dcad8b;
+		justify-self: center;
+		align-self: center;
 		grid-area: anime-5;
 		}
 	  
