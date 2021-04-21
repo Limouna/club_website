@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById("navbar-auth").setAttribute('onclick','signOut()')
     } else {
         document.getElementById("navbar-auth").innerText = "Connexion";
-        document.getElementById("navbar-auth").href = "login/index.html";
+        document.getElementById("navbar-auth").href = "login_v2/index.html";
         alert("Currently no active users");
     }
     });

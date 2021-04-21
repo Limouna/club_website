@@ -2641,7 +2641,7 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
+	/* #footer {
 		background: #E8EEF4;
 		color: #7c8081;
 		padding: 5em 5em 10em 5em;
@@ -2668,7 +2668,7 @@ input, select, textarea {
 					margin: 0;
 					padding: 0;
 					border: 0;
-				}
+				} */
 
 /* Wide */
 
@@ -3345,11 +3345,11 @@ input, select, textarea {
 	/* --- Grid Setup --- */  
 	  .container {
 		display: grid;
-		height: 60vh;
+		/* height: 60vh; */
 		width: 90%;
 		margin-top: 20px;
 		grid-template-columns: 1fr 1fr 1fr ;
-		grid-template-rows: 1.5fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 0.1fr 1fr;
 		grid-template-areas:
 			"slideshow slideshow kanji"
 			"announcement-list announcement-list random_fact"
@@ -3437,7 +3437,7 @@ input, select, textarea {
 	  @media only screen and (max-width: 800px) {
 		.container {
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 0.1fr 1fr 1fr 1fr;
 			grid-template-areas: "slideshow" "kanji" "announcement-list" "random_fact" "recommendations_title" "anime_recommendations" "manga_recommendations" "jmovie_recommendations";
 		}
 	  }
