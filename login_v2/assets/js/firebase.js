@@ -32,3 +32,4 @@ firebase.auth().onAuthStateChanged(function(user) {
         alert("Currently no active users");
     }
     });
+

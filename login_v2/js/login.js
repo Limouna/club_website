@@ -13,6 +13,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
+var provider = new firebase.auth.GoogleAuthProvider();
 
 function logIn() {
     var email = document.getElementById("email");
@@ -42,16 +43,27 @@ if (user) {
   }
 });
 
+function logInWithGmail() {
+  firebase.auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
 
-
-const googleSignIn = () => {
-    const googleProvider = new firebase.auth.GoogleAuthProvider();
-  
-    auth.signInWithPopup(googleProvider)
-    .then(() => {
-      console.log("bruh");
-    })
-    .catch(error => {
-      console.error(error);
-    })
-  }
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+  // Apparently login with redirection is better for mobile devices, this is the code for it : firebase.auth().signInWithRedirect(provider);
+}   
