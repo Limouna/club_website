@@ -1,0 +1,47 @@
+/* ----------------Google Fonts----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('//db.onlinewebfonts.com/c/c6f5218272f98dd91e0742b9c2bdb0a2?family=Gang+of+Three');
+
+/* -------------------CSS Reset-------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: auto;
+}
+
+footer {
+  padding: auto;
+  background-color: #b52726;
+  color: #ffff;
+}
+
+footer a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+  color: #E1992D;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+
+footer .form-control {
+  background-color: #00000;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: #d1d2d2;
+  padding: 0.7em 1em;
+}
+
+.list-unstyled, .Copyrights {
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+
+.footer_titles {
+  font-family: gang of three;
+}
